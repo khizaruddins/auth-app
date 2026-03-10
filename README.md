@@ -71,3 +71,7 @@ export default defineConfig([
   },
 ])
 ```
+
+
+Deployed URL : 
+https://auth-app-eight-beige.vercel.app/
