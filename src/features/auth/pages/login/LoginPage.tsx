@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import Input, { type InputProps } from '../../../../components/input/Input';
 import Button from '../../../../components/button/Button';
+import { useNavigate } from 'react-router-dom';
 
 interface InputPropsWithId extends InputProps {
   id: number;
 }
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const emailPasswordArr: InputPropsWithId[] = [
     {
       id: 1,
@@ -81,7 +83,9 @@ const LoginPage = () => {
             <Button
               label="Sign Up"
               extraClasses="border transition-all ease-in-out border-1 rounded-lg w-full cursor-pointer px-4 py-2 bg-white text-black hover:bg-black hover:text-white"
-              onClick={() => {}}
+              onClick={() => {
+                navigate('/register');
+              }}
               type="button"
             />
           </div>
