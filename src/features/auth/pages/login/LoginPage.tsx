@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Input, { type InputProps } from '../../../../components/input/Input';
+import Button from '../../../../components/button/Button';
 
 interface InputPropsWithId extends InputProps {
   id: number;
@@ -14,7 +15,7 @@ const LoginPage = () => {
       placeholder: 'Enter your email',
       error: 'This field is required',
       showError: false,
-      extraClasses: '',
+      extraClasses: 'mb-4',
       value: '',
     },
     {
@@ -24,7 +25,7 @@ const LoginPage = () => {
       placeholder: 'Enter your password',
       error: 'This field is required',
       showError: false,
-      extraClasses: '',
+      extraClasses: 'mb-4',
       value: '',
     },
   ];
@@ -67,6 +68,22 @@ const LoginPage = () => {
                 value={item.id === 1 ? loginForm.email : loginForm.password}
               />
             ))}
+          </div>
+          <div>
+            <Button
+              label="Login"
+              extraClasses="border border-1 transition-all ease-in-out rounded-lg w-full cursor-pointer px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 hover:text-gray-100"
+              onClick={() => {}}
+              type="button"
+            />
+          </div>
+          <div>
+            <Button
+              label="Sign Up"
+              extraClasses="border transition-all ease-in-out border-1 rounded-lg w-full cursor-pointer px-4 py-2 bg-white text-black hover:bg-black hover:text-white"
+              onClick={() => {}}
+              type="button"
+            />
           </div>
         </form>
       </div>
